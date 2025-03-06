@@ -52,6 +52,7 @@ Los requisitos de calidad se presentan en forma de **historias de calidad**, sig
 | **RQ-06** | Administrador | Se solicita generar un modo de recuperación al detectar fallos en el servicio | Módulo de inventario | El servicio está caído | El sistema debe redirigir las solicitudes a una instancia activa y generar alerta de recuperación | La redirección debe ocurrir en un mínimo de tiempo de 5 segundos y la alerta, genearse en menos de 50 segundos |
 | **RQ-07** | Administrador | Se solicita garantizar la entrega de mensajes | RabbitMQ | El sistema detecta un mensaje fallido o no procesado correctamente | El mensaje debe reenviarse a una cola de eventos pendientes para su reprocesamiento, y el sistema debe notificar al administrador si el mensaje falla más de 3 veces | El mensaje debe reprocesarse en menos de 3 minutos y la notificación al administrador no debe demorar más de 1 minuto en aparecer después del 3 fallo |
 | **RQ-08** | Cliente | Se solicita garantizar la búsqueda de productos en la tienda | Sistema (UI) | El servicio de búsqueda está caído temporalmente | El sistema debe mostrar un mensaje claro y útil al cliente indicando el problema y una solución alternativa | El mensaje debe mostrarse en menos de 4 segundos | 
+| **RQ-09** | Administrador | Se solicita un sistema robusto y confiable | Sistema Core | Alta carga de pedidos simultáneos | El sistema debe mantener la disponibilidad y procesar pedidos sin errores. | El sistema debe procesar 10 pedidos simultáneos sin pérdida de datos |
 
 ---
 
